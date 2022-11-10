@@ -1,5 +1,6 @@
 <template>
   <HeaderComponent/>
+  <main>Contents goes here</main>
   <FooterComponent/>
 </template>
 

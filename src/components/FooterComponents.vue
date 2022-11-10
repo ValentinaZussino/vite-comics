@@ -16,4 +16,5 @@ import BluebarComponent from './BluebarComponent.vue';
 
 <style lang="scss" scoped>
 
+
 </style>

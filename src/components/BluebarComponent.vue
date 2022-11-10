@@ -14,23 +14,23 @@
                 linksImage : [
                     {
                         text: 'digital comics',
-                        url: '../assets/img/buy-comics-digital-comics.png'
+                        url: 'buy-comics-digital-comics.png'
                     },
                     {
                         text: 'dc merchandise',
-                        url: '../assets/img/buy-comics-merchandise.png'
+                        url: 'buy-comics-merchandise.png'
                     },
                     {
                         text: 'subscription',
-                        url: '../assets/img/buy-comics-subscriptions.png'
+                        url: 'buy-comics-subscriptions.png'
                     },
                     {
                         text: 'comic shop locator',
-                        url: '../assets/img/buy-comics-shop-locator.png'
+                        url: 'buy-comics-shop-locator.png'
                     },
                     {
                         text: 'dc power visa',
-                        url: '../assets/img/buy-dc-power-visa.svg'
+                        url: 'buy-dc-power-visa.svg'
                     }
                 ]
             }

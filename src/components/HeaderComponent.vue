@@ -1,15 +1,17 @@
 <template>
     <header>
-        <a href="#">
-            <img src="../assets/img/dc-logo.png" alt="DC logo">
-        </a>
-        <nav>
-            <ul>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :href="link.url">{{link.text}}</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container container-header">
+            <a href="#" id="top-logo">
+                <img src="../assets/img/dc-logo.png" alt="DC logo">
+            </a>
+            <nav>
+                <ul>
+                    <li v-for="(link, index) in links" :key="index" :class="{'active': link.current}">
+                        <a :href="link.url" :class="{'active': link.current}">{{link.text}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 </template>
 
@@ -76,5 +78,43 @@
 </script>
 
 <style lang="scss" scoped>
-
+@use '../assets/styles/partials/variables' as *;
+    header {
+        padding: 10px;
+        .container-header {
+            justify-content: space-between;
+            height: 80px;
+        }
+        #top-logo {width: 60px}
+        nav {height: 80px;}
+        ul {
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            li {
+                height: 100%;
+                a {
+                display: inline-block;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 13px;
+                text-transform: uppercase;
+                color: $darkgray;
+                padding: 0 1rem;
+                line-height: 80px;
+                &.active {
+                    color: $blue;
+                }
+                }
+                &:hover {background-color: rgb(221, 221, 221);}
+                &.active {
+                    border-bottom: 2px solid $blue;
+                }
+            }
+            
+        }
+    }
 </style>

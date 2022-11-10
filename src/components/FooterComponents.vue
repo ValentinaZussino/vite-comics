@@ -1,16 +1,12 @@
 <template>
-    <footer>
-    <BluebarComponent/>
+    <footer class="container">
         Footer here
     </footer>
 </template>
 
 <script>
-import BluebarComponent from './BluebarComponent.vue';
-
     export default {
     name: "FooterComponent",
-    components: { BluebarComponent }
 }
 </script>
 

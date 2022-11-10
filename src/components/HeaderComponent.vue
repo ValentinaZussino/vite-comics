@@ -80,9 +80,9 @@
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
     header {
-        padding: 10px;
         .container-header {
             justify-content: space-between;
+            align-items: center;
             height: 80px;
         }
         #top-logo {width: 60px}
@@ -111,7 +111,7 @@
                 }
                 &:hover {background-color: rgb(221, 221, 221);}
                 &.active {
-                    border-bottom: 2px solid $blue;
+                    border-bottom: 3px solid $blue;
                 }
             }
             

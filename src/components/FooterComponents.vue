@@ -3,35 +3,40 @@
     <footer >
         <div class="top-footer">
             <div class="container">
-                <div class="col">
-                    <span>dc comics</span>
-                    <ul>
-                        <li v-for="(link, index) in linksComics" :key="index">
-                            <a href="#">{{link.text}}</a>
-                        </li>
-                    </ul>
-                    <span>shop</span>
-                    <ul>
-                        <li v-for="(link, index) in linksShop" :key="index">
-                            <a href="#">{{link.text}}</a>
-                        </li>
-                    </ul>
+                <div class="wrapper-col">
+                    <div class="col">
+                        <span>dc comics</span>
+                        <ul>
+                            <li v-for="(link, index) in linksComics" :key="index">
+                                <a href="#">{{link.text}}</a>
+                            </li>
+                        </ul>
+                        <span>shop</span>
+                        <ul>
+                            <li v-for="(link, index) in linksShop" :key="index">
+                                <a href="#">{{link.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <span>dc</span>
+                        <ul>
+                            <li v-for="(link, index) in linksDc" :key="index">
+                                <a href="#">{{link.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <span>sites</span>
+                        <ul>
+                            <li v-for="(link, index) in linksSites" :key="index">
+                                <a href="#">{{link.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col">
-                    <span>dc</span>
-                    <ul>
-                        <li v-for="(link, index) in linksDc" :key="index">
-                            <a href="#">{{link.text}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <span>sites</span>
-                    <ul>
-                        <li v-for="(link, index) in linksSites" :key="index">
-                            <a href="#">{{link.text}}</a>
-                        </li>
-                    </ul>
+                <div id="dc-bground">
+                    <img src="../assets/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
         </div>
@@ -209,24 +214,35 @@
     .top-footer {
         background-image: url('../assets/img/footer-bg.jpg'); 
         background-size: cover;
-        min-height: 280px;
+        .container {
+            padding: 0 2rem;
+            justify-content: space-between;
+            .wrapper-col {
+                display: flex;
+                .col {
+                    margin-right: 20px;
 
-        .col {
-            margin-right: 20px;
-
-            span{text-transform: uppercase; color: white;}
-            ul{ 
-                list-style: none;
-                padding-top: 12px;
-                li{
-                    padding-bottom: 5px;
-                    a{text-decoration: none; color: $lightgray; font-size: 13px;}
-                }
-                li:last-of-type{
-                    padding-bottom: 20px;
+                    span{text-transform: uppercase; color: white; display: inline-block; margin-top: 2rem;}
+                    ul{ 
+                        list-style: none;
+                        padding-top: 12px;
+                        li{
+                            padding-bottom: 5px;
+                            a{text-decoration: none; color: $lightgray; font-size: 13px;}
+                        }
+                        li:last-of-type{
+                            padding-bottom: 20px;
+                        }
+                    }
                 }
             }
+            #dc-bground {
+                height: 500px;
+                overflow: hidden;
+                margin-top: -70px;
+            }
         }
+        
     }
     .bottom-footer {
         background-color: $darkgray;

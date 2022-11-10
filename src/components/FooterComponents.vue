@@ -214,6 +214,7 @@
     .top-footer {
         background-image: url('../assets/img/footer-bg.jpg'); 
         background-size: cover;
+        overflow: hidden;
         .container {
             padding: 0 2rem;
             justify-content: space-between;

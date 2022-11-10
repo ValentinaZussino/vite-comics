@@ -1,7 +1,10 @@
 <template>
     <div id="blue-bar">
         <div class="container">
-            Blue bar
+            <div v-for="(link, index) in linksImages" :key="index" class="icon">
+                <img :src="getImagePath(`../assets/img/${link.url}`)" class="img-icon">
+                <a href="#">{{link.text}}</a>
+            </div>
         </div> 
     </div>
 </template>
@@ -11,7 +14,7 @@
         name: 'BluebarComponent',
         data(){
             return {
-                linksImage : [
+                linksImages : [
                     {
                         text: 'digital comics',
                         url: 'buy-comics-digital-comics.png'
@@ -34,6 +37,11 @@
                     }
                 ]
             }
+        },
+        methods: {
+            getImagePath(imgPath){
+                return new URL(imgPath, import.meta.url).href;
+            }
         }
     }
 </script>
@@ -42,5 +50,29 @@
 @use '../assets/styles/partials/variables' as *;
     #blue-bar{
         background-color: $blue;
+
+        .container {
+            justify-content: center;
+		    align-items: center;
+            .icon{
+            display: flex;
+			justify-content: center;
+			align-items: center;
+            flex-basis: calc(100% - 10rem) / 5;
+            padding: 1rem;
+            .img-icon{
+                width: 45px;
+                margin-right: 10px;
+            }
+            &:nth-child(4) .img-icon { width: 28px; padding-right: 0;}
+            a{
+                color: white;
+                font-size: 15px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+        }
     }
 </style>

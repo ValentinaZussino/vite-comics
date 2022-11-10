@@ -1,5 +1,5 @@
 <template>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <footer >
         <div class="top-footer">
             <div class="container">
@@ -37,14 +37,14 @@
         </div>
         <div class="bottom-footer">
             <div class="container">
-                <button>sign-up-now</button>
+                <button>sign-up now!</button>
                 <div>
                     <span>follow us</span>
-                    <span><i class="fa-brands fa-facebook"></i></span>
-                    <span><i class="fa-brands fa-twitter"></i></span>
-                    <span><i class="fa-brands fa-youtube"></i></span>
-                    <span><i class="fa-brands fa-pinterest-p"></i></span>
-                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <a><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+                    <a><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+                    <a><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+                    <a><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+                    <a><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
                 </div>
             </div>
         </div>
@@ -233,6 +233,33 @@
         div.container {
             justify-content: space-between;
             align-items: center;
+
+            button {
+            background-color: transparent;
+            border: 2px solid $blue;
+            color: white;
+            text-transform: uppercase;
+            padding: 15px;
+            }
+
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                text-transform: uppercase;
+                color: $blue;
+                font-weight: bold;
+                padding-right: 20px;
+                }
+                a {padding-right: 0.8rem; 
+                    img {
+                        width:30px;
+                        cursor: pointer;
+                    }   
+                }
+            }
         }
+        
     }
 </style>

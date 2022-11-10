@@ -11,13 +11,27 @@
                     </ul>
                     <span>shop</span>
                     <ul>
-                        <li v-for="(shop, index) in linksShop" :key="index">
-                            <a href="#">{{shop.text}}</a>
+                        <li v-for="(link, index) in linksShop" :key="index">
+                            <a href="#">{{link.text}}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col">
+                    <span>dc</span>
+                    <ul>
+                        <li v-for="(link, index) in linksDc" :key="index">
+                            <a href="#">{{link.text}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span>sites</span>
+                    <ul>
+                        <li v-for="(link, index) in linksSites" :key="index">
+                            <a href="#">{{link.text}}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="bottom-footer">
@@ -89,6 +103,90 @@
                         url: "#",
                         current: false,
                     },
+                ],
+                linksDc: [
+                    {
+                        text: "Terms Of Use",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Privacy Policy (New)",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Add Choices",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Advertising",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Jobs",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Subscriptions",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Talent Workshops",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "CPSC Certificates",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Ratings",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Shop Help",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "Contacts Us",
+                        url: "#",
+                        current: false,
+                    },
+                ],
+                linksSites: [
+                    {
+                        text: "DC",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "MAD Magazine",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "DC Kids",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "DC Universe",
+                        url: "#",
+                        current: false,
+                    },
+                    {
+                        text: "DC Power Visa",
+                        url: "#",
+                        current: false,
+                    },
                 ]
             }
         }
@@ -100,20 +198,21 @@
     .top-footer {
         background-image: url('../assets/img/footer-bg.jpg'); 
         background-size: cover;
-        min-height: 300px;
+        min-height: 280px;
 
         .col {
-            // width: 100px;
             margin-right: 20px;
-            border: 1px solid red;
 
             span{text-transform: uppercase; color: white;}
             ul{ 
                 list-style: none;
-                padding-top: 13px;
+                padding-top: 12px;
                 li{
                     padding-bottom: 5px;
                     a{text-decoration: none; color: $lightgray; font-size: 13px;}
+                }
+                li:last-of-type{
+                    padding-bottom: 20px;
                 }
             }
         }
